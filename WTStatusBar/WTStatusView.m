@@ -57,8 +57,6 @@
 
 - (void)initView
 {
-    self.backgroundColor = [UIColor blackColor];
-    
     statusText = [[UILabel alloc] init];
     statusText.backgroundColor = [UIColor clearColor];
     statusText.textColor = [UIColor colorWithWhite:0.75 alpha:1.0];
@@ -89,8 +87,7 @@
 
 - (void)setStatusBarColor:(UIColor *)color
 {
-    CGFloat windowAlpha = ([[UIApplication sharedApplication] statusBarStyle] == UIStatusBarStyleBlackTranslucent) ? 0.5 : 1.0;
-    self.backgroundColor = [color colorWithAlphaComponent:windowAlpha];
+    self.backgroundColor = color;
 }
 
 - (void)setStatusTextColor:(UIColor*)color
